@@ -1,0 +1,55 @@
+name: python_phylo
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # Core Python and scientific computing
+  - python=3.10
+  - numpy>=1.21.0
+  - pandas>=1.3.0
+  - scipy>=1.7.0
+  - matplotlib>=3.5.0
+  - seaborn>=0.11.0
+  
+  # Phylogenetic analysis
+  - biopython>=1.79
+  - dendropy>=4.5.2
+  - ete3>=3.1.2
+  
+  # Additional visualization and analysis
+  - plotly>=5.0.0
+  - networkx>=2.6
+  - scikit-learn>=1.0.0
+  
+  # Data handling and I/O
+  - openpyxl>=3.0.9
+  - xlsxwriter>=3.0.0
+  
+  # Jupyter notebook support (optional)
+  - jupyter>=1.0.0
+  - ipykernel>=6.0.0
+  
+  # Performance and utilities
+  - numba>=0.56.0
+  - tqdm>=4.62.0
+  
+  # Statistical analysis
+  - statsmodels>=0.13.0
+  
+  # Tree visualization alternatives
+  - toytree>=2.0.0
+  
+  # For handling large datasets
+  - dask>=2021.9.0
+  
+  # Development and debugging
+  - pytest>=6.0.0
+  - black>=21.0.0
+  
+  # Alternative phylogenetic tools
+  - pip
+  - pip:
+    - phylo-treetime>=0.9.0
+    - toyplot>=1.0.0

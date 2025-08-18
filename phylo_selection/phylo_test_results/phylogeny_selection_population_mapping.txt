@@ -1,0 +1,45 @@
+Population mapping between files:
+FST file populations:
+  BIJ-C30
+  BJJ-C34
+  BRS-C268
+  DSJ-C190
+  DoeJ-C27
+  FHJ-C38
+  FUR-C230
+  GEJ-C42
+  GSJ-C274
+  GUS-C41
+  GoeJ-C19
+  HAS-C59
+  HHJ-C162
+  JEJ-C119
+  JHJ-C220
+  JoeJ-C252
+  KLJ-C127
+  KOS-C293
+  KRS-C23
+  LEJ-C64
+  LVJ-C76
+  MMS-C295
+  MSJ-C2
+  NOJ-C37
+  ORoe-C299
+  RDJ-C344
+  RYJ-C139
+  SBJ-C52
+  SHJ-C48
+  SKJ-C16
+  SKJ-C216
+  SKS-C55
+  SSJ-C259
+  STF-C266
+  SUJ-C130
+  TOJ-C71
+  ULJ-C60
+  UTJ-C22
+  VAJ-C24
+  aaRJ-C225
+  aeRoe-C36
+
+Mapping rule: Remove 'EntNic_' prefix from selection region population names
