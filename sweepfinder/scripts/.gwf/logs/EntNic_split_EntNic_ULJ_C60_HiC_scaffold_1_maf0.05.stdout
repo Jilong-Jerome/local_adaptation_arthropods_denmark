@@ -1,0 +1,25 @@
+START: Fri May 23 02:55:49 PM CEST 2025
+JobID: 61015803
+FINISH: Fri May 23 02:55:50 PM CEST 2025
+Name                : EntNic_split_EntNic_ULJ_C60_HiC_scaffold_1_maf0.05
+User                : jilong
+Account             : spider2
+Partition           : short
+Nodes               : cn-1047
+Cores               : 1
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-05-23T11:25:18
+Start               : 2025-05-23T14:55:37
+End                 : --
+Waited              : 00:06:03
+Reserved walltime   : 01:00:00
+Used walltime       : 00:00:13
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 1G
+Max Mem used        : 37.11M (cn-1047)
+Max Disk Write      : 19.90M (cn-1047)
+Max Disk Read       : 87.98M (cn-1047)

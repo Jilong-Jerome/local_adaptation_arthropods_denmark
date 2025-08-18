@@ -1,0 +1,58 @@
+START: Sat May 24 09:11:01 AM CEST 2025
+JobID: 61015336
+done readsnps datasize=220935 nmax=100 nmin=100 xmax=101 invar=2
+getfreq rdatasize=101
+calling findmax numpar=100
+RUNNING THE L-BFGS-B CODE
+
+	* * *
+
+Machine precision=2.220446e-16
+N = 100    M = 12
+ITERATION 0
+At iterate    0 f=961148.540529	|proj g| = 4.311717e-05
+
+	* * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cuachy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+	* * *
+N	Tit	Tnf	Tnint	Skip	Nact	Projg	F
+100	0	1	0	0	0	4.311717e-05	9.611485e+05
+ F = 961148.540529
+CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL           
+Cauchy time 0 seconds.
+Subspace minimization time 0 seconds.
+Line search time 0 seconds.
+Total User time 0 seconds.
+
+frequency spectrum written to EntNic_EntNic_JEJ-C119_HiC_scaffold_6_maf0.05_spectrum.txt
+FINISH: Sat May 24 09:11:01 AM CEST 2025
+Name                : EntNic_specturm_EntNic_JEJ_C119_HiC_scaffold_6_maf0.05
+User                : jilong
+Account             : spider2
+Partition           : short
+Nodes               : cn-1052
+Cores               : 1
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-05-23T11:25:10
+Start               : 2025-05-24T09:10:37
+End                 : --
+Waited              : 18:19:11
+Reserved walltime   : 12:00:00
+Used walltime       : 00:00:24
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 4G
+Max Mem used        : 25.82M (cn-1052)
+Max Disk Write      : 1.00M (cn-1052)
+Max Disk Read       : 33.54M (cn-1052)

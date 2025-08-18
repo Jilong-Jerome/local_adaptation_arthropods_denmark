@@ -1,0 +1,27 @@
+START: Wed May 28 03:02:29 PM CEST 2025
+JobID: 61727599
+/faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/scripts/workflow_sources/viz_chr_pos_res.R
+Rscript /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/scripts/workflow_sources/viz_chr_pos_res.R /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/steps/EntNic/sweepfinder2_output/EntNic_maf0.05_w1000_o1_swpf2.tsv EntNic 0.05 1000 1
+FINISH: Wed May 28 03:24:39 PM CEST 2025
+Name                : EntNic_manhattan_maf0.05_w1000_o1
+User                : jilong
+Account             : spider2
+Partition           : normal
+Nodes               : s22n31
+Cores               : 1
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-05-28T15:01:51
+Start               : 2025-05-28T15:02:27
+End                 : --
+Waited              : 00:00:36
+Reserved walltime   : 12:00:00
+Used walltime       : 00:22:12
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 4G
+Max Mem used        : 2.92G (s22n31)
+Max Disk Write      : 7.12G (s22n31)
+Max Disk Read       : 5.93G (s22n31)

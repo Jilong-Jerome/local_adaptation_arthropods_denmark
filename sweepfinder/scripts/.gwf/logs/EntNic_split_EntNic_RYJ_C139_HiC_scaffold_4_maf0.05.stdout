@@ -1,0 +1,25 @@
+START: Fri May 23 02:53:24 PM CEST 2025
+JobID: 61015602
+FINISH: Fri May 23 02:53:24 PM CEST 2025
+Name                : EntNic_split_EntNic_RYJ_C139_HiC_scaffold_4_maf0.05
+User                : jilong
+Account             : spider2
+Partition           : short
+Nodes               : cn-1041
+Cores               : 1
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-05-23T11:25:14
+Start               : 2025-05-23T14:53:03
+End                 : --
+Waited              : 00:03:29
+Reserved walltime   : 01:00:00
+Used walltime       : 00:00:21
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 1G
+Max Mem used        : 25.55M (cn-1041)
+Max Disk Write      : 8.76M (cn-1041)
+Max Disk Read       : 54.43M (cn-1041)

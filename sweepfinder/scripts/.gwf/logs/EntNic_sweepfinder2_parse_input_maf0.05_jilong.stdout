@@ -1,0 +1,25 @@
+START: Fri May 23 02:05:19 PM CEST 2025
+JobID: 61015037
+FINISH: Fri May 23 02:49:32 PM CEST 2025
+Name                : EntNic_sweepfinder2_parse_input_maf0.05_jilong
+User                : jilong
+Account             : spider2
+Partition           : normal
+Nodes               : cn-1034
+Cores               : 1
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-05-23T11:24:49
+Start               : 2025-05-23T14:05:18
+End                 : --
+Waited              : 02:40:29
+Reserved walltime   : 12:00:00
+Used walltime       : 00:44:14
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 8G
+Max Mem used        : 33.60M (cn-1034)
+Max Disk Write      : 533.43M (cn-1034)
+Max Disk Read       : 120.16G (cn-1034)

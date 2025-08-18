@@ -1,0 +1,23 @@
+# Tag identifying file association.
+TAG: jilong:EcoGenetics:local_adaptation:sweepfinder2:workflowconfiguration
+# The name of the relevant project account.
+account: EcoGenetics
+# Name of species being analyzed
+species_name: Stegodyphus africanus
+# ID of species for short
+species_id : EntNic
+# Directory for intermediary files.
+working_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/steps
+#Directory for final output files
+output_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/steps
+# Directory for log files
+log_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/steps/logs
+# Directory for helping functions and scripts
+scripts_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/scripts/workflow_sources
+# the corresponding input vcf files for sweepfinder for this species
+input_vcf: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/data/EntNiC_sweepfinder_input.vcf
+# gunzip -c /faststorage/project/EcoGenetics/general_workflow_outputs/population_genetics/vcf/collembola/Entomobrya_nicoleti/grassland/EntNic.grassland.ingroup.highQuality.freebayes.merge.normalized.filtered_DP200-660.ann.vcf.gz > EntNiC_sweepfinder_input.vcf
+# the list of population name in the same order as in the input vcf file
+pop_order_in_vcf: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/data/EntNic_pops.txt
+# the list of chromosomes in the reference genome
+reference_fai_index: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/data/EG_EntNic_05092024_genomic.fna.fai 

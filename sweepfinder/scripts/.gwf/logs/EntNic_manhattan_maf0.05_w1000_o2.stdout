@@ -1,0 +1,4 @@
+START: Tue Jun 10 02:40:49 PM CEST 2025
+JobID: 62471380
+/faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/scripts/workflow_sources/viz_chr_pos_res.R
+Rscript /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/scripts/workflow_sources/viz_chr_pos_res.R /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/steps/EntNic/sweepfinder2_output/EntNic_maf0.05_w1000_o2_swpf2.tsv EntNic 0.05 1000 2

@@ -1,0 +1,25 @@
+START: Fri May 23 02:50:52 PM CEST 2025
+JobID: 61015194
+FINISH: Fri May 23 02:50:53 PM CEST 2025
+Name                : EntNic_split_EntNic_GEJ_C42_HiC_scaffold_1_maf0.05
+User                : jilong
+Account             : spider2
+Partition           : short
+Nodes               : cn-1052
+Cores               : 1
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-05-23T11:25:07
+Start               : 2025-05-23T14:50:28
+End                 : --
+Waited              : 00:00:54
+Reserved walltime   : 01:00:00
+Used walltime       : 00:00:25
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 1G
+Max Mem used        : 26.07M (cn-1052)
+Max Disk Write      : 19.85M (cn-1052)
+Max Disk Read       : 87.85M (cn-1052)

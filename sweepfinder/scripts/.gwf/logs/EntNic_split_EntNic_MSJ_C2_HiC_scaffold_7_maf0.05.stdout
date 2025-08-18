@@ -1,0 +1,25 @@
+START: Fri May 23 02:53:15 PM CEST 2025
+JobID: 61015527
+FINISH: Fri May 23 02:53:15 PM CEST 2025
+Name                : EntNic_split_EntNic_MSJ_C2_HiC_scaffold_7_maf0.05
+User                : jilong
+Account             : spider2
+Partition           : short
+Nodes               : s21n34
+Cores               : 1
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-05-23T11:25:13
+Start               : 2025-05-23T14:53:03
+End                 : --
+Waited              : 00:03:29
+Reserved walltime   : 01:00:00
+Used walltime       : 00:00:12
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 1G
+Max Mem used        : 25.41M (s21n34)
+Max Disk Write      : 1.75M (s21n34)
+Max Disk Read       : 32.99M (s21n34)

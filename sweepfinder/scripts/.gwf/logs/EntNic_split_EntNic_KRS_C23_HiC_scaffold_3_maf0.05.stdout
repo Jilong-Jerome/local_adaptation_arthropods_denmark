@@ -1,0 +1,25 @@
+START: Fri May 23 03:00:23 PM CEST 2025
+JobID: 61015431
+FINISH: Fri May 23 03:00:23 PM CEST 2025
+Name                : EntNic_split_EntNic_KRS_C23_HiC_scaffold_3_maf0.05
+User                : jilong
+Account             : spider2
+Partition           : short
+Nodes               : s21n64
+Cores               : 1
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-05-23T11:25:11
+Start               : 2025-05-23T14:52:11
+End                 : --
+Waited              : 00:02:37
+Reserved walltime   : 01:00:00
+Used walltime       : 00:08:20
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 1G
+Max Mem used        : 105.08M (s21n64)
+Max Disk Write      : 13.69M (s21n64)
+Max Disk Read       : 67.32M (s21n64)

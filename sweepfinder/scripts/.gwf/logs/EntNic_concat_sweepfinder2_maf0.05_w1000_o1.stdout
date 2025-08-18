@@ -1,0 +1,25 @@
+START: Sun May 25 01:26:42 AM CEST 2025
+JobID: 61015908:
+FINISH: Sun May 25 01:27:30 AM CEST 2025
+Name                : EntNic_concat_sweepfinder2_maf0.05_w1000_o1
+User                : jilong
+Account             : spider2
+Partition           : normal
+Nodes               : s22n24
+Cores               : 1
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-05-23T11:25:20
+Start               : 2025-05-25T01:26:39
+End                 : --
+Waited              : 01:17:33
+Reserved walltime   : 12:00:00
+Used walltime       : 00:00:51
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 4G
+Max Mem used        : 26.50M (s22n24)
+Max Disk Write      : 1.46G (s22n24)
+Max Disk Read       : 1.49G (s22n24)
