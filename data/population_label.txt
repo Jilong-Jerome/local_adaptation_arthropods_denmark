@@ -1,0 +1,22 @@
+Outgroup_1(South-East)
+	BRS,VAJ,JEJ
+
+North-West
+	North Jylland (Top)
+		aaRJ, SKJ, RDJ, STJ, BIJ, SUJ
+	North Jylland (Middle)
+		KLJ, DoeJ, NOJ, GSJ, ULJ, LVJ, SBJ, GEJ
+	North Jylland (West)
+		BJJ, TOJ, LEJ, FUR
+	Middle Jylland
+		GoeJ, SHJ, RYJ, JoeJ, SSJ
+
+South-East
+	North Sjaeland
+		HAS, SKS, ORoe, GUS
+	Outgroup_2(East Jylland)
+		JHJ
+	East Jylland
+		UTJ, DSJ, MSJ, HHJ	
+	South Costal Denmark
+		aeRoe, FHJ, KRS, KOS, MMS, STF

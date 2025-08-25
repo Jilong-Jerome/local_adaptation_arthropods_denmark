@@ -1,0 +1,137 @@
+================================================================================
+SELECTION REGION DISTRIBUTION SUMMARY
+================================================================================
+
+Analysis based on: present + weakly present regions
+Overlap fraction threshold for presence: 0.2
+Total selection regions analyzed: 1494
+
+--- Distribution by main geographic regions ---
+North-West only:            413 (27.6%)
+South-East only:            423 (28.3%)
+Outgroup only:              117 (7.8%)
+Shared North-West & South-East:  265 (17.7%)
+Shared with outgroups:      268 (17.9%)
+Universal (all labels):       8 (0.5%)
+
+--- Selection region length distribution by geographic pattern ---
+Category                   Count    Mean(bp)   Median(bp)   Min(bp)    Max(bp)    Std(bp)
+-------------------------------------------------------------------------------------
+North-West only          413       18626        6708      1007    1094192     65321
+South-East only          423       15525        6737      1012     248289     27578
+Outgroup only            117        9790        5329      1000      64791     11613
+Shared NW & SE           265       40474       20793      1004     524514     57762
+Shared w/ outgroups      268       53282       29760      1000     394577     68483
+Universal                  8      115529       89739     51953     217395     50478
+
+--- Selection peak length distribution by geographic pattern ---
+Category                   Count    Mean(bp)   Median(bp)   Min(bp)    Max(bp)    Std(bp)
+-------------------------------------------------------------------------------------
+North-West only         1192       13322        5736         1    1094192     38943
+South-East only          928       13270        6696         1     242339     21430
+Outgroup only            127        9202        4875         1      64791     11311
+Shared NW & SE          3264       19176       10395         1     323811     24942
+Shared w/ outgroups     3945       22181       12234         1     272791     28661
+Universal                464       31920       17772         1     217395     40751
+
+--- Present regions per population label ---
+North-West_Middle Jylland     :  273 (18.3%)
+North-West_North Jylland (Middle):  487 (32.6%)
+North-West_North Jylland (Top):  348 (23.3%)
+North-West_North Jylland (West):  356 (23.8%)
+Outgroup_1                    :  340 (22.8%)
+South-East_East Jylland       :  305 (20.4%)
+South-East_North Sjaeland     :  401 (26.8%)
+South-East_Outgroup_2(East Jylland):  191 (12.8%)
+South-East_South Costal Denmark:  436 (29.2%)
+
+--- Weakly present regions per population label ---
+North-West_Middle Jylland     :   53 (3.5%)
+North-West_North Jylland (Middle):   38 (2.5%)
+North-West_North Jylland (Top):   51 (3.4%)
+North-West_North Jylland (West):   36 (2.4%)
+Outgroup_1                    :   53 (3.5%)
+South-East_East Jylland       :   36 (2.4%)
+South-East_North Sjaeland     :   43 (2.9%)
+South-East_Outgroup_2(East Jylland):   32 (2.1%)
+South-East_South Costal Denmark:   38 (2.5%)
+
+--- Average selection regions per population within each label ---
+Population Label               Populations  Mean±SD      Median   Min   Max
+---------------------------------------------------------------------------
+North-West_Middle Jylland                5  84.2±19.1     88.0    51   110
+North-West_North Jylland (Middle)           8  140.9±17.8    144.0   116   169
+North-West_North Jylland (Top)           6  109.5±50.4    134.5     0   142
+North-West_North Jylland (West)           4  150.8±10.2    154.5   134   160
+Outgroup_1                               3  132.7±72.4     83.0    80   235
+South-East_East Jylland                  4  116.8±29.0    127.0    69   144
+South-East_North Sjaeland                4  146.2±45.4    143.0    98   201
+South-East_Outgroup_2(East Jylland)           1  191.0± 0.0    191.0   191   191
+South-East_South Costal Denmark           6  138.3±38.9    154.0    82   185
+
+--- Mann-Whitney U Test: North-West vs South-East ---
+Statistical test for difference in selection regions per population
+North-West populations: n=23, mean=122.1, median=134.0
+South-East populations: n=15, mean=138.2, median=144.0
+U-statistic:    138.5
+P-value:     0.317042 (not significant, p ≥ 0.05)
+
+--- Mann-Whitney U Test: Region-Specific Selections Only ---
+Statistical test comparing region-specific selection burden
+Total North-West only regions: 413
+Total South-East only regions: 423
+North-West populations: n=23, mean= 37.1, median= 40.0
+South-East populations: n=15, mean= 48.9, median= 48.0
+U-statistic:    117.0
+P-value:     0.100054 (not significant, p ≥ 0.05)
+
+--- Detailed distribution patterns ---
+Format: NW:X_SE:Y_OUT:Z means X North-West labels, Y South-East labels, Z Outgroup labels
+NW:0_SE:1_OUT:0     :  318 (21.3%)
+NW:1_SE:0_OUT:0     :  283 (18.9%)
+NW:0_SE:0_OUT:1     :  117 (7.8%)
+NW:2_SE:0_OUT:0     :   84 (5.6%)
+NW:0_SE:2_OUT:0     :   79 (5.3%)
+NW:1_SE:1_OUT:0     :   58 (3.9%)
+NW:2_SE:1_OUT:0     :   34 (2.3%)
+NW:0_SE:1_OUT:1     :   34 (2.3%)
+NW:3_SE:0_OUT:0     :   33 (2.2%)
+NW:1_SE:2_OUT:0     :   33 (2.2%)
+NW:1_SE:0_OUT:1     :   32 (2.1%)
+NW:1_SE:1_OUT:1     :   24 (1.6%)
+NW:3_SE:2_OUT:0     :   22 (1.5%)
+NW:3_SE:1_OUT:0     :   21 (1.4%)
+NW:0_SE:3_OUT:0     :   21 (1.4%)
+NW:2_SE:2_OUT:0     :   20 (1.3%)
+NW:0_SE:2_OUT:1     :   17 (1.1%)
+NW:4_SE:3_OUT:1     :   14 (0.9%)
+NW:2_SE:0_OUT:1     :   13 (0.9%)
+NW:4_SE:0_OUT:0     :   13 (0.9%)
+NW:3_SE:1_OUT:1     :   13 (0.9%)
+NW:1_SE:3_OUT:0     :   13 (0.9%)
+NW:3_SE:3_OUT:1     :   11 (0.7%)
+NW:1_SE:3_OUT:1     :   11 (0.7%)
+NW:3_SE:3_OUT:0     :   11 (0.7%)
+NW:2_SE:2_OUT:1     :   11 (0.7%)
+NW:2_SE:1_OUT:1     :   11 (0.7%)
+NW:4_SE:2_OUT:1     :   11 (0.7%)
+NW:3_SE:2_OUT:1     :   11 (0.7%)
+NW:4_SE:1_OUT:1     :    9 (0.6%)
+NW:0_SE:3_OUT:1     :    9 (0.6%)
+NW:4_SE:1_OUT:0     :    9 (0.6%)
+NW:4_SE:2_OUT:0     :    9 (0.6%)
+NW:4_SE:4_OUT:1     :    8 (0.5%)
+NW:2_SE:3_OUT:0     :    8 (0.5%)
+NW:4_SE:3_OUT:0     :    8 (0.5%)
+NW:2_SE:3_OUT:1     :    7 (0.5%)
+NW:1_SE:2_OUT:1     :    7 (0.5%)
+NW:4_SE:4_OUT:0     :    6 (0.4%)
+NW:4_SE:0_OUT:1     :    6 (0.4%)
+NW:1_SE:4_OUT:0     :    6 (0.4%)
+NW:3_SE:0_OUT:1     :    6 (0.4%)
+NW:3_SE:4_OUT:0     :    5 (0.3%)
+NW:0_SE:4_OUT:0     :    5 (0.3%)
+NW:3_SE:4_OUT:1     :    5 (0.3%)
+NW:1_SE:4_OUT:1     :    3 (0.2%)
+NW:2_SE:4_OUT:1     :    3 (0.2%)
+NW:2_SE:4_OUT:0     :    2 (0.1%)
