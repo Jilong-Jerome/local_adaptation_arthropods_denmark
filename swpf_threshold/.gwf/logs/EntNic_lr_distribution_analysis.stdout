@@ -1,0 +1,58 @@
+Starting LR distribution analysis for EntNic...
+Input file: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/data/EntNic_maf0.05_w1000_o2_swpf2.tsv
+Output directory: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/swpf_threshold/results/EntNic_lr_distribution
+Processing /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/data/EntNic_maf0.05_w1000_o2_swpf2.tsv...
+Getting population list...
+Found 41 populations: ['EntNic_BIJ-C30', 'EntNic_BJJ-C34', 'EntNic_BRS-C268', 'EntNic_DSJ-C190', 'EntNic_DoeJ-C27', 'EntNic_FHJ-C38', 'EntNic_FUR-C230', 'EntNic_GEJ-C42', 'EntNic_GSJ-C274', 'EntNic_GUS-C41', 'EntNic_GoeJ-C19', 'EntNic_HAS-C59', 'EntNic_HHJ-C162', 'EntNic_JEJ-C119', 'EntNic_JHJ-C220', 'EntNic_JoeJ-C252', 'EntNic_KLJ-C127', 'EntNic_KOS-C293', 'EntNic_KRS-C23', 'EntNic_LEJ-C64', 'EntNic_LVJ-C76', 'EntNic_MMS-C295', 'EntNic_MSJ-C2', 'EntNic_NOJ-C37', 'EntNic_ORoe-C299', 'EntNic_RDJ-C344', 'EntNic_RYJ-C139', 'EntNic_SBJ-C52', 'EntNic_SHJ-C48', 'EntNic_SKJ-C16', 'EntNic_SKJ-C216', 'EntNic_SKS-C55', 'EntNic_SSJ-C259', 'EntNic_STF-C266', 'EntNic_SUJ-C130', 'EntNic_TOJ-C71', 'EntNic_ULJ-C60', 'EntNic_UTJ-C22', 'EntNic_VAJ-C24', 'EntNic_aaRJ-C225', 'EntNic_aeRoe-C36']
+Processing population: EntNic_BIJ-C30
+Processing population: EntNic_BJJ-C34
+Processing population: EntNic_BRS-C268
+Processing population: EntNic_DSJ-C190
+Processing population: EntNic_DoeJ-C27
+Processing population: EntNic_FHJ-C38
+Processing population: EntNic_FUR-C230
+Processing population: EntNic_GEJ-C42
+Processing population: EntNic_GSJ-C274
+Processing population: EntNic_GUS-C41
+Processing population: EntNic_GoeJ-C19
+Processing population: EntNic_HAS-C59
+Processing population: EntNic_HHJ-C162
+Processing population: EntNic_JEJ-C119
+Processing population: EntNic_JHJ-C220
+Processing population: EntNic_JoeJ-C252
+Processing population: EntNic_KLJ-C127
+Processing population: EntNic_KOS-C293
+Processing population: EntNic_KRS-C23
+Processing population: EntNic_LEJ-C64
+Processing population: EntNic_LVJ-C76
+Processing population: EntNic_MMS-C295
+Processing population: EntNic_MSJ-C2
+Processing population: EntNic_NOJ-C37
+Processing population: EntNic_ORoe-C299
+Processing population: EntNic_RDJ-C344
+Processing population: EntNic_RYJ-C139
+Processing population: EntNic_SBJ-C52
+Processing population: EntNic_SHJ-C48
+Processing population: EntNic_SKJ-C16
+Processing population: EntNic_SKJ-C216
+Processing population: EntNic_SKS-C55
+Processing population: EntNic_SSJ-C259
+Processing population: EntNic_STF-C266
+Processing population: EntNic_SUJ-C130
+Processing population: EntNic_TOJ-C71
+Processing population: EntNic_ULJ-C60
+Processing population: EntNic_UTJ-C22
+Processing population: EntNic_VAJ-C24
+Processing population: EntNic_aaRJ-C225
+Processing population: EntNic_aeRoe-C36
+
+Summary completed!
+- Summary statistics saved to: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/swpf_threshold/results/EntNic_lr_distribution/LR_summary_statistics.tsv
+- Individual population distributions saved to: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/swpf_threshold/results/EntNic_lr_distribution
+- Total populations processed: 41
+
+Quick overview:
+Population count: 41
+Mean LR range: 1.533 - 40.859
+Max LR overall: 7526.604
+LR distribution analysis completed successfully for EntNic

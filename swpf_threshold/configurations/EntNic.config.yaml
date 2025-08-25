@@ -1,0 +1,19 @@
+# Configuration for likelihood ratio distribution analysis
+# Tag identifying file association.
+TAG: jilong:EcoGenetics:local_adaptation:threshold_analysis:workflowconfiguration
+# The name of the relevant project account.
+account: EcoGenetics
+# Name of species being analyzed
+species_name: Entomobrya nicoleti
+# ID of species for short
+species_id: EntNic
+# Directory for intermediary files and scripts.
+working_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/swpf_threshold
+# Directory for final output files
+output_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/swpf_threshold/results
+# Directory for log files
+log_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/swpf_threshold/logs
+# Directory for scripts
+scripts_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/swpf_threshold
+# Path to SweepFinder2 result file
+sweepfinder2_result_file: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/data/EntNic_maf0.05_w1000_o2_swpf2.tsv
