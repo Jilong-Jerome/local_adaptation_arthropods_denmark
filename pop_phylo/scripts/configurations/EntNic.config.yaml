@@ -1,0 +1,28 @@
+# Tag identifying file association.
+TAG: jilong:EcoGenetics:local_adaptation:pop_phylo:workflowconfiguration
+# The name of the relevant project account.
+account: EcoGenetics
+# Name of species being analyzed
+species_name: Entomobrya nicoleti
+# ID of species for short
+species_id : EntNic
+# Directory for intermediary files.
+working_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/pop_phylo/steps
+# Directory for final output files
+output_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/pop_phylo/steps
+# Directory for log files
+log_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/pop_phylo/steps/logs
+# Directory for helping functions and scripts
+scripts_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/pop_phylo/scripts/workflow_sources
+# The corresponding input vcf files for phylogeny analysis
+input_vcf: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/data/EntNiC_sweepfinder_input.vcf
+# Number of bootstrap replicates for phylogenetic analysis
+bootstrap_replicates: 2
+# Random seed for reproducible sampling
+random_seed: 42
+# Output filename prefix
+output_name: phylo_sequences
+# Specific scaffolds to include (optional, space-separated)
+scaffolds: ""
+# Specific regions to include (optional, space-separated in format scaffold:start-end)
+regions: ""
