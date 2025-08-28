@@ -23,6 +23,11 @@ def pop_phylo_workflow(config_file: str, gwf):
     OUTPUT_NAME: str = CONFIG.get('output_name', 'phylo_sequences')
     SCAFFOLDS: str = CONFIG.get('scaffolds', '')
     REGIONS: str = CONFIG.get('regions', '')
+    FST_FILE: str = CONFIG.get('fst_file', '')
+    FST_METHOD: str = CONFIG.get('fst_method', 'average')
+    KEEP_ORIGINAL_NAMES: bool = CONFIG.get('keep_original_names', True)
+    IQTREE_MODEL: str = CONFIG.get('iqtree_model', 'MFP+G')
+    IQTREE_THREADS: int = CONFIG.get('iqtree_threads', 4)
     
     # --------------------------------------------------
     #                  Workflow
@@ -45,5 +50,55 @@ def pop_phylo_workflow(config_file: str, gwf):
             scaffolds = SCAFFOLDS,
             regions = REGIONS) 
     )
+
+    # --------------------------------------------------
+    #          FST-based phylogeny generation
+    # --------------------------------------------------
+    if FST_FILE:  # Only add this step if FST file is provided
+        gwf.target_from_template(
+            name = f"{SPECIES_ID}_fst_phylogeny",
+            template = fst_phylo_generation(
+                work_path = WORK_DIR, 
+                script_path = SCRIPTS_PATH, 
+                log_path = LOG_DIR, 
+                spid = SPECIES_ID, 
+                fst_file = FST_FILE,
+                output_name = OUTPUT_NAME,
+                method = FST_METHOD) 
+        )
+
+    # --------------------------------------------------
+    #          IQ-TREE input preparation (parallel)
+    # --------------------------------------------------
+    if FST_FILE:  # Only add these steps if FST file is provided
+        for rep in range(1, BOOTSTRAP_REPS + 1):
+            gwf.target_from_template(
+                name = f"{SPECIES_ID}_iqtree_prep_rep{rep:03d}",
+                template = prepare_iqtree_single_rep(
+                    work_path = WORK_DIR, 
+                    script_path = SCRIPTS_PATH, 
+                    log_path = LOG_DIR, 
+                    spid = SPECIES_ID, 
+                    replicate = rep,
+                    output_name = OUTPUT_NAME,
+                    keep_original_names = KEEP_ORIGINAL_NAMES) 
+            )
+
+    # --------------------------------------------------
+    #          IQ-TREE3 phylogenetic inference (parallel)
+    # --------------------------------------------------
+    if FST_FILE:  # Only add these steps if FST file is provided
+        for rep in range(1, BOOTSTRAP_REPS + 1):
+            gwf.target_from_template(
+                name = f"{SPECIES_ID}_iqtree_rep{rep:03d}",
+                template = run_iqtree3_single_rep(
+                    work_path = WORK_DIR, 
+                    script_path = SCRIPTS_PATH, 
+                    log_path = LOG_DIR, 
+                    spid = SPECIES_ID, 
+                    replicate = rep,
+                    model = IQTREE_MODEL,
+                    threads = IQTREE_THREADS) 
+            )
 
     return gwf
