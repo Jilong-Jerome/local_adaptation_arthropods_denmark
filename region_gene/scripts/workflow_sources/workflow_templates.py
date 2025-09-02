@@ -83,3 +83,115 @@ def extract_region_genes(work_path: str, script_path: str, log_path: str, spid: 
     echo done > {outputs["log"]}
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+
+
+def blast_gene_annotation(work_path: str, script_path: str, log_path: str, spid: str,
+                         blast_db: str, region_id: str = None, evalue: float = 1e-5):
+    """Run BLAST annotation on extracted gene sequences."""
+    
+    if region_id:
+        # Process specific region
+        inputs = {
+            "fasta_file": f"{work_path}/{spid}/region_genes/{region_id}_genes.fasta",
+            "extract_log": f"{log_path}/{spid}/{spid}_extract_genes_all.DONE"
+        }
+        outputs = {
+            "annotation": f"{work_path}/{spid}/gene_annotations/{region_id}_gene_annotations.tsv",
+            "log": f"{log_path}/{spid}/{spid}_diamond_{region_id}.DONE"
+        }
+        region_arg = f"--region-id {region_id}"
+    else:
+        # Process all regions - this would need to be implemented differently
+        # For now, focus on single region processing
+        inputs = {
+            "gene_dir": f"{work_path}/{spid}/region_genes/",
+            "extract_log": f"{log_path}/{spid}/{spid}_extract_genes_all.DONE"
+        }
+        outputs = {
+            "annotation_dir": f"{work_path}/{spid}/gene_annotations/",
+            "log": f"{log_path}/{spid}/{spid}_diamond_all.DONE"
+        }
+        region_arg = ""
+    
+    options = {
+        'cores': 4,
+        'memory': '16g',
+        'walltime': '12:00:00',
+        'account': 'EcoGenetics'
+    }
+    
+    if region_id:
+        # Single region processing
+        spec = f"""
+        # Setting conda environments
+        CONDA_BASE=$(conda info --base)
+        source $CONDA_BASE/etc/profile.d/conda.sh
+        conda activate python_phylo
+        
+        # Writing job information to standard output
+        echo "START: $(date)"
+        echo "JobID: $SLURM_JOBID"
+        
+        # Setting working directory
+        mkdir -p {work_path}/{spid}/gene_annotations
+        mkdir -p {log_path}/{spid}
+        
+        cd {work_path}/{spid}/gene_annotations
+        
+        # Check if input FASTA file exists
+        if [[ ! -f "{inputs["fasta_file"]}" ]]; then
+            echo "Error: FASTA file not found: {inputs["fasta_file"]}"
+            exit 1
+        fi
+        
+        # Run Diamond annotation
+        python {script_path}/blast_gene_annotation.py \\
+            --fasta-file {inputs["fasta_file"]} \\
+            --diamond-db {blast_db}/reference_proteomes.dmnd \\
+            --output-file {outputs["annotation"]} \\
+            --log-file {work_path}/{spid}/gene_annotations/diamond_{region_id}.log \\
+            --evalue {evalue}
+        
+        echo "FINISH: $(date)"
+        jobinfo $SLURM_JOBID
+        echo done > {outputs["log"]}
+        """
+    else:
+        # All regions processing
+        spec = f"""
+        # Setting conda environments
+        CONDA_BASE=$(conda info --base)
+        source $CONDA_BASE/etc/profile.d/conda.sh
+        conda activate python_phylo
+        
+        # Writing job information to standard output
+        echo "START: $(date)"
+        echo "JobID: $SLURM_JOBID"
+        
+        # Setting working directory
+        mkdir -p {work_path}/{spid}/gene_annotations
+        mkdir -p {log_path}/{spid}
+        
+        cd {work_path}/{spid}/gene_annotations
+        
+        # Process all FASTA files in region_genes directory
+        for fasta_file in {work_path}/{spid}/region_genes/*_genes.fasta; do
+            if [[ -f "$fasta_file" ]]; then
+                basename=$(basename "$fasta_file" _genes.fasta)
+                echo "Processing $basename..."
+                
+                python {script_path}/blast_gene_annotation.py \\
+                    --fasta-file "$fasta_file" \\
+                    --diamond-db {blast_db}/reference_proteomes.dmnd \\
+                    --output-file "{work_path}/{spid}/gene_annotations/${{basename}}_gene_annotations.tsv" \\
+                    --log-file {work_path}/{spid}/gene_annotations/diamond_${{basename}}.log \\
+                    --evalue {evalue}
+            fi
+        done
+        
+        echo "FINISH: $(date)"
+        jobinfo $SLURM_JOBID
+        echo done > {outputs["log"]}
+        """
+    
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)

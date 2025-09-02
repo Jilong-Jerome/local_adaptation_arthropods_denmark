@@ -21,3 +21,6 @@ gff_file: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_
 # Region filtering and extension parameters
 min_region_length: 5000
 flank_size: 10000
+# Diamond annotation parameters  
+blast_db: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/data/UniProt_062025
+blast_evalue: 1e-5
