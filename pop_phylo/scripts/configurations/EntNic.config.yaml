@@ -15,9 +15,9 @@ log_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptat
 # Directory for helping functions and scripts
 scripts_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/pop_phylo/scripts/workflow_sources
 # The corresponding input vcf files for phylogeny analysis
-input_vcf: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/data/EntNiC_sweepfinder_input.vcf
+input_vcf: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/sweepfinder/data/EntNic_sweepfinder_input.vcf
 # Number of bootstrap replicates for phylogenetic analysis
-bootstrap_replicates: 2
+bootstrap_replicates: 100
 # Random seed for reproducible sampling
 random_seed: 42
 # Output filename prefix
@@ -26,3 +26,13 @@ output_name: phylo_sequences
 scaffolds: ""
 # Specific regions to include (optional, space-separated in format scaffold:start-end)
 regions: ""
+# FST file for phylogenetic analysis based on population structure
+fst_file: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/data/EntNic_grassland_fst.tsv
+# FST analysis method (average, maximum, minimum)
+fst_method: average
+# Whether to keep original sample names in phylogenetic output
+keep_original_names: true
+# IQ-TREE evolutionary model selection method
+iqtree_model: MFP+G
+# Number of threads for IQ-TREE analysis
+iqtree_threads: 4
