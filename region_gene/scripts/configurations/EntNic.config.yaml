@@ -1,0 +1,23 @@
+# Tag identifying file association.
+TAG: jilong:EcoGenetics:local_adaptation:region_gene:workflowconfiguration
+# The name of the relevant project account.
+account: EcoGenetics
+# Name of species being analyzed
+species_name: Entomobrya nicoleti
+# ID of species for short
+species_id : EntNic
+# Directory for intermediary files.
+working_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/region_gene/steps
+# Directory for final output files
+output_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/region_gene/steps
+# Directory for log files
+log_directory_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/region_gene/steps/logs
+# Directory for helping functions and scripts
+scripts_path: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/region_gene/scripts/workflow_sources
+# Input files for gene extraction
+regions_file: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/data/EntNic_grassland_selection_regions.tsv
+genome_file: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/data/EntNic_genome.fasta
+gff_file: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/data/EntNic_genome_annotation.gff
+# Region filtering and extension parameters
+min_region_length: 5000
+flank_size: 10000
