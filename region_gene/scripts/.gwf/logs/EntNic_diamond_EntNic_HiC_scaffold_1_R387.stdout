@@ -1,0 +1,25 @@
+START: Tue Sep  2 04:12:12 PM CEST 2025
+JobID: 4059740
+FINISH: Tue Sep  2 04:26:47 PM CEST 2025
+Name                : EntNic_diamond_EntNic_HiC_scaffold_1_R387
+User                : jilong
+Account             : spider2
+Partition           : short
+Nodes               : cn-1055
+Cores               : 4
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-09-02T16:11:23
+Start               : 2025-09-02T16:11:43
+End                 : --
+Waited              : 00:00:20
+Reserved walltime   : 12:00:00
+Used walltime       : 00:15:04
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 16G
+Max Mem used        : 3.41G (cn-1055)
+Max Disk Write      : 1.00M (cn-1055)
+Max Disk Read       : 42.79G (cn-1055)

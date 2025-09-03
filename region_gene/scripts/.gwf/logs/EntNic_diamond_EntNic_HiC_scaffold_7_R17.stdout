@@ -1,0 +1,25 @@
+START: Tue Sep  2 04:21:29 PM CEST 2025
+JobID: 4060616
+FINISH: Tue Sep  2 04:21:32 PM CEST 2025
+Name                : EntNic_diamond_EntNic_HiC_scaffold_7_R17
+User                : jilong
+Account             : spider2
+Partition           : short
+Nodes               : s21n71
+Cores               : 4
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-09-02T16:11:36
+Start               : 2025-09-02T16:21:19
+End                 : --
+Waited              : 00:09:43
+Reserved walltime   : 12:00:00
+Used walltime       : 00:00:13
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 16G
+Max Mem used        : 29.39M (s21n71)
+Max Disk Write      : 1.00M (s21n71)
+Max Disk Read       : 38.86M (s21n71)

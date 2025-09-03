@@ -1,0 +1,25 @@
+START: Tue Sep  2 04:12:48 PM CEST 2025
+JobID: 4060164
+FINISH: Tue Sep  2 04:12:48 PM CEST 2025
+Name                : EntNic_diamond_EntNic_HiC_scaffold_2_R78
+User                : jilong
+Account             : spider2
+Partition           : normal
+Nodes               : cn-1006
+Cores               : 4
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-09-02T16:11:29
+Start               : 2025-09-02T16:11:56
+End                 : --
+Waited              : 00:00:27
+Reserved walltime   : 12:00:00
+Used walltime       : 00:00:52
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 16G
+Max Mem used        : 30.35M (cn-1006)
+Max Disk Write      : 1.00M (cn-1006)
+Max Disk Read       : 38.96M (cn-1006)

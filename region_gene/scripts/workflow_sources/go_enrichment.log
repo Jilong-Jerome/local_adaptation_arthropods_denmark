@@ -1,0 +1,2 @@
+2025-09-02 16:58:55,455 - INFO - Reading UniProt IDs from test_ids.txt
+2025-09-02 16:58:55,455 - ERROR - Error in GO enrichment analysis: [Errno 2] No such file or directory: 'test_ids.txt'
