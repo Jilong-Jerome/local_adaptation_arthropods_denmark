@@ -1,0 +1,26 @@
+name: R_GO
+channels:
+  - conda-forge
+  - bioconda
+  - r
+dependencies:
+  # R and essential packages
+  - r-base=4.3.*
+  - r-optparse
+  - r-dplyr
+  - r-data.table
+  
+  # Bioconductor packages
+  - bioconductor-clusterprofiler
+  - bioconductor-go.db
+  - bioconductor-org.dm.eg.db
+  - bioconductor-org.hs.eg.db
+  - bioconductor-org.mm.eg.db
+  - bioconductor-dose
+  - bioconductor-enrichplot
+  - bioconductor-gosemsim
+  
+  # Additional useful R packages
+  - r-ggplot2
+  - r-stringr
+  - r-tidyr

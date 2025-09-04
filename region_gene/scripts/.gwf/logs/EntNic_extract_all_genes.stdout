@@ -1,0 +1,25 @@
+START: Wed Sep  3 03:23:47 PM CEST 2025
+JobID: 4109096
+FINISH: Wed Sep  3 03:23:54 PM CEST 2025
+Name                : EntNic_extract_all_genes
+User                : jilong
+Account             : spider2
+Partition           : short
+Nodes               : s21n44
+Cores               : 2
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-09-03T15:23:38
+Start               : 2025-09-03T15:23:39
+End                 : --
+Waited              : 00:00:01
+Reserved walltime   : 04:00:00
+Used walltime       : 00:00:15
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 16G
+Max Mem used        : 95.23M (s21n44)
+Max Disk Write      : 109.06M (s21n44)
+Max Disk Read       : 479.12M (s21n44)

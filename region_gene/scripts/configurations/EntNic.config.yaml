@@ -24,3 +24,10 @@ flank_size: 10000
 # Diamond annotation parameters  
 blast_db: /faststorage/project/EcoGenetics/people/jilong/local_adaptation/local_adaptation_arthropods_denmark/data/UniProt_062025
 blast_evalue: 1e-5
+# Whole genome gene annotation (optional)
+# Set to true to process all genes in the genome in addition to region genes
+process_whole_genome: true
+# Number of genes per chunk for parallel processing of whole genome
+gene_chunk_size: 1000
+# Estimated total number of genes in genome (for resource allocation)
+estimated_gene_count: 50000

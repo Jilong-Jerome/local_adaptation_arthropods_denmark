@@ -195,3 +195,123 @@ def blast_gene_annotation(work_path: str, script_path: str, log_path: str, spid:
         """
     
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+
+
+def extract_all_genes(work_path: str, script_path: str, log_path: str, spid: str,
+                     genome_file: str, gff_file: str):
+    """Extract all gene sequences from genome using GFF annotation into a single FASTA file."""
+    inputs = {
+        "genome_file": genome_file, 
+        "gff_file": gff_file
+    }
+    
+    outputs = {
+        "fasta_file": f"{work_path}/{spid}/all_genes/all_genes.fasta",
+        "log": f"{log_path}/{spid}/{spid}_extract_all_genes.DONE"
+    }
+    
+    options = {
+        'cores': 2,
+        'memory': '16g',
+        'walltime': '04:00:00',
+        'account': 'EcoGenetics'
+    }
+    
+    spec = f"""
+    # Setting conda environments
+    CONDA_BASE=$(conda info --base)
+    source $CONDA_BASE/etc/profile.d/conda.sh
+    conda activate python_phylo
+    
+    # Writing job information to standard output
+    echo "START: $(date)"
+    echo "JobID: $SLURM_JOBID"
+    
+    # Setting working directory
+    mkdir -p {work_path}/{spid}/all_genes
+    mkdir -p {log_path}/{spid}
+    
+    cd {work_path}/{spid}/all_genes
+    
+    # Check if input files exist
+    if [[ ! -f "{inputs["genome_file"]}" ]]; then
+        echo "Error: Genome file not found: {inputs["genome_file"]}"
+        exit 1
+    fi
+    
+    if [[ ! -f "{inputs["gff_file"]}" ]]; then
+        echo "Error: GFF file not found: {inputs["gff_file"]}"
+        exit 1
+    fi
+    
+    # Run whole-genome gene extraction
+    python {script_path}/extract_all_genes.py \\
+        --genome-file {inputs["genome_file"]} \\
+        --gff-file {inputs["gff_file"]} \\
+        --output-dir {work_path}/{spid}/all_genes \\
+        --log-file {work_path}/{spid}/all_genes/gene_extraction.log \\
+        --output-filename all_genes.fasta
+    
+    echo "FINISH: $(date)"
+    jobinfo $SLURM_JOBID
+    echo done > {outputs["log"]}
+    """
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+
+
+def blast_all_genes_annotation(work_path: str, script_path: str, log_path: str, spid: str,
+                               blast_db: str, evalue: float = 1e-5):
+    """Run BLAST annotation on all genes."""
+    
+    inputs = {
+        "fasta_file": f"{work_path}/{spid}/all_genes/all_genes.fasta",
+        "extract_log": f"{log_path}/{spid}/{spid}_extract_all_genes.DONE"
+    }
+    outputs = {
+        "annotation": f"{work_path}/{spid}/all_gene_annotations/all_genes_annotations.tsv",
+        "log": f"{log_path}/{spid}/{spid}_diamond_all_genes.DONE"
+    }
+    
+    options = {
+        'cores': 8,
+        'memory': '32g',
+        'walltime': '24:00:00',
+        'account': 'EcoGenetics'
+    }
+    
+    spec = f"""
+    # Setting conda environments
+    CONDA_BASE=$(conda info --base)
+    source $CONDA_BASE/etc/profile.d/conda.sh
+    conda activate python_phylo
+    
+    # Writing job information to standard output
+    echo "START: $(date)"
+    echo "JobID: $SLURM_JOBID"
+    
+    # Setting working directory
+    mkdir -p {work_path}/{spid}/all_gene_annotations
+    mkdir -p {log_path}/{spid}
+    
+    cd {work_path}/{spid}/all_gene_annotations
+    
+    # Check if input FASTA file exists
+    if [[ ! -f "{inputs["fasta_file"]}" ]]; then
+        echo "Error: FASTA file not found: {inputs["fasta_file"]}"
+        exit 1
+    fi
+    
+    # Run Diamond annotation on all genes
+    python {script_path}/blast_gene_annotation.py \\
+        --fasta-file {inputs["fasta_file"]} \\
+        --diamond-db {blast_db}/reference_proteomes.dmnd \\
+        --output-file {outputs["annotation"]} \\
+        --log-file {work_path}/{spid}/all_gene_annotations/diamond_all_genes.log \\
+        --evalue {evalue}
+    
+    echo "FINISH: $(date)"
+    jobinfo $SLURM_JOBID
+    echo done > {outputs["log"]}
+    """
+    
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)

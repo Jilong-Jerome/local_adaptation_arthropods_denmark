@@ -27,6 +27,10 @@ def region_gene_workflow(config_file: str, gwf):
     BLAST_DB: str = CONFIG['blast_db']
     EVALUE: float = CONFIG.get('blast_evalue', 1e-5)
     
+    # Whole genome processing option
+    PROCESS_WHOLE_GENOME: bool = CONFIG.get('process_whole_genome', False)
+    GENE_CHUNK_SIZE: int = CONFIG.get('gene_chunk_size', 1000)
+    
     # --------------------------------------------------
     #                  Workflow
     # --------------------------------------------------
@@ -103,6 +107,35 @@ def region_gene_workflow(config_file: str, gwf):
         gwf.target_from_template(
             name = f"{SPECIES_ID}_diamond_gene_annotation",
             template = blast_gene_annotation(
+                work_path = WORK_DIR,
+                script_path = SCRIPTS_PATH,
+                log_path = LOG_DIR,
+                spid = SPECIES_ID,
+                blast_db = BLAST_DB,
+                evalue = EVALUE)
+        )
+    
+    # --------------------------------------------------
+    #          Whole genome gene processing (optional)
+    # --------------------------------------------------
+    if PROCESS_WHOLE_GENOME:
+        
+        # Extract all genes from genome into single FASTA file
+        gwf.target_from_template(
+            name = f"{SPECIES_ID}_extract_all_genes",
+            template = extract_all_genes(
+                work_path = WORK_DIR, 
+                script_path = SCRIPTS_PATH, 
+                log_path = LOG_DIR, 
+                spid = SPECIES_ID,
+                genome_file = GENOME_FILE,
+                gff_file = GFF_FILE) 
+        )
+
+        # Run Diamond annotation on all genes
+        gwf.target_from_template(
+            name = f"{SPECIES_ID}_diamond_all_genes",
+            template = blast_all_genes_annotation(
                 work_path = WORK_DIR,
                 script_path = SCRIPTS_PATH,
                 log_path = LOG_DIR,

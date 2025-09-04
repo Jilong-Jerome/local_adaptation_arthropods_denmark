@@ -1,0 +1,25 @@
+START: Wed Sep  3 03:24:24 PM CEST 2025
+JobID: 4109097
+FINISH: Wed Sep  3 04:07:41 PM CEST 2025
+Name                : EntNic_diamond_all_genes
+User                : jilong
+Account             : spider2
+Partition           : normal
+Nodes               : cn-1025
+Cores               : 8
+GPUs                : 0
+State               : RUNNING
+ExitCode            : --
+Submit              : 2025-09-03T15:23:38
+Start               : 2025-09-03T15:24:23
+End                 : --
+Waited              :   00:00:26
+Reserved walltime   : 1-00:00:00
+Used walltime       :   00:43:18
+Used CPU time       :   00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 32G
+Max Mem used        : 7.87G (cn-1025)
+Max Disk Write      : 2.30G (cn-1025)
+Max Disk Read       : 45.38G (cn-1025)
